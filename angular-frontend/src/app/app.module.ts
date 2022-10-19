@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FinancingFormComponent } from './components/financing-form/financing-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgToastModule } from 'ng-angular-popup';
 
 const appRoutes: Routes = [
   {
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     FinancingFormComponent
   ],
   imports: [
+    NgToastModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,

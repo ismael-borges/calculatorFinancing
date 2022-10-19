@@ -3,22 +3,21 @@
         <legend>Formulário de financiamento</legend>
         <div class="wrapper">
             <div class="form-control">
-                <label for="amount">Valor <span style="color: red">*</span></label>
+                <label for="amount">Valor<span style="color: red">*</span></label>
                 <input type="number" name="amount" min="0" max="5" [(ngModel)]="calculatorFinancing.amount">
-                <span>Min 1 - Max 5.</span>
             </div>
             <div class="form-control">
-                <label for="entry">Entrada <span style="color: red">*</span></label>
+                <label for="entry">Entrada<span style="color: red">*</span></label>
                 <input type="number" name="entry"[(ngModel)]="calculatorFinancing.entry">
                 <span>Min 0</span>
             </div>
             <div class="form-control">
-                <label for="parcel">Quantidade de meses <span style="color: red">*</span></label>
+                <label for="parcel">Quantidade de meses (parcela)<span style="color: red">*</span></label>
                 <input type="number" min="0" max="100" name="parcel"[(ngModel)]="calculatorFinancing.parcel">
                 <span>Min 1 - Max 100.</span>
             </div>
             <div class="form-control">
-                <label for="rate">Taxa de juros <span style="color: red">*</span></label>
+                <label for="rate">Taxa de juros (mês)<span style="color: red">*</span></label>
                 <input type="number" name="rate" [(ngModel)]="calculatorFinancing.rate">
                 <span>Min 1</span>
             </div>

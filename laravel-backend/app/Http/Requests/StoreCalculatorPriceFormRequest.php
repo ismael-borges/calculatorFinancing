@@ -23,13 +23,13 @@ class StoreCalculatorPriceFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'amount.required' => 'O parâmetro amount é obrigatório.',
-            'parcel.min' => 'O parâmetro parcel o valor mínimo deve ser 1.',
-            'parcel.max' => 'O parâmetro parcel não pode ser maior do que 100.',
-            'parcel.required' => 'O parâmetro parcel é obrigatório.',
-            'rate.max' => 'O parâmetro rate não pode ser maior do que 5.',
-            'rate.min' => 'O parâmetro rate o valor mínimo deve ser 1.',
-            'rate.required' => 'O parâmetro rate é obrigatório.',
+            'amount.required' => 'O valor é obrigatório.',
+            'parcel.min' => 'Quantidade de meses o valor mínimo deve ser 1.',
+            'parcel.max' => 'Quantidade de meses não pode ser maior do que 100.',
+            'parcel.required' => 'Quantidade de meses é obrigatório.',
+            'rate.max' => 'A taxa de juros não pode ser maior do que 5.',
+            'rate.min' => 'A taxa de juros o valor mínimo deve ser 1.',
+            'rate.required' => 'A taxa de juros é obrigatória.',
         ];
     }
 }
