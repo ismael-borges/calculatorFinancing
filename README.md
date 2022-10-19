@@ -1,5 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a>
-<a href="https://angularjs.org" target="_blank"><img src="https://angularjs.org/img/AngularJS-large.png" width="300"></a></p>
+</p>
+<p align="center"><a href="https://angularjs.org" target="_blank"><img src="https://angularjs.org/img/AngularJS-large.png" width="300"></a></p>
 
 ## Sobre
 
