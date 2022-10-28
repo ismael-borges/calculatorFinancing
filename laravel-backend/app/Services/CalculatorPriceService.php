@@ -7,12 +7,13 @@ use Carbon\Carbon;
 class CalculatorPriceService
 {
     public function calculateInstallment(
-        float $entry,
+        ?float $entry,
         float $financingAmount,
         int $parcel,
         float $rate
     ): \Illuminate\Http\JsonResponse
     {
+        $this->validateBalanceDue($financingAmount, $entry);
         $financingAmount = $entry ? $financingAmount - $entry : $financingAmount;
 
         $rate = ($rate/100);
@@ -53,4 +54,17 @@ class CalculatorPriceService
         $dt->addMonth(1);
         return $dt->startOfMonth()->format('Y-m-d');
     }
+
+    /**
+     * @param float $balanceDue
+     * @param float $entry
+     * @throws \Exception
+     */
+    private function validateBalanceDue(float $balanceDue, float $entry)
+    {
+        if ($entry > $balanceDue) {
+            throw new \Exception("A valor de entrada não pode ser maior do que o saldo devedor");
+        }
+    }
 }
+

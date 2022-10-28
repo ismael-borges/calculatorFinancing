@@ -15,11 +15,15 @@ class CalculatorPriceController extends Controller
     {
         $data = $request->json()->all();
 
-        return $this->calculatorPriceService->calculateInstallment(
-            $data['entry'],
-            $data['amount'],
-            $data['parcel'],
-            $data['rate']
-        );
+        try {
+            return $this->calculatorPriceService->calculateInstallment(
+                $data['entry'],
+                $data['amount'],
+                $data['parcel'],
+                $data['rate']
+            );
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
     }
 }
